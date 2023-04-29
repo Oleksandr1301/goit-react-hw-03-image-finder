@@ -83,7 +83,7 @@ export class App extends Component {
         <Searchbar onSubmit={this.onSubmit} />
         <ImageGallery images={images} onClickImage={this.onClickImage} />
         {isLoading && <Loader />}
-        {showBtn && <Button onNextPage={this.onNextPage} />}
+        {showBtn && !isLoading && <Button onNextPage={this.onNextPage} />}
         {showModal && (
           <Modal
             largeImageURL={largeImageURL}
